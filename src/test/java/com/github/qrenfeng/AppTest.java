@@ -1,20 +1,19 @@
 package com.github.qrenfeng;
 
-import static org.junit.Assert.assertTrue;
-
+import com.github.qrenfeng.common.utils.HttpUtils;
 import org.junit.Test;
+
+import java.io.IOException;
 
 /**
  * Unit test for simple App.
  */
-public class AppTest 
-{
+public class AppTest {
     /**
      * Rigorous Test :-)
      */
     @Test
-    public void shouldAnswerWithTrue()
-    {
-        assertTrue( true );
+    public void shouldAnswerWithTrue() throws IOException {
+        System.out.println(HttpUtils.get("http://www.baidu.com"));
     }
 }
